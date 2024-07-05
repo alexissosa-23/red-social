@@ -35,10 +35,3 @@ exports.login = async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 };
-
-// Obtener todos los usuarios
-exports.getAllUsers = async (req, res) => {
-        User.find({})
-        .then(users => res.json(users))
-        .catch(err => res.json(err));
-};
